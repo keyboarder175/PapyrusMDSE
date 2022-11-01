@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="MDSEPraes2" nsURI="http:///MDSEPraes2.ecore" nsPrefix="MDSEPraes2">
+  <eClassifiers xsi:type="ecore:EClass" name="Lager">
+    <eOperations name="addArtikel" ordered="false" lowerBound="1">
+      <eParameters name="artikelToAdd" ordered="false" lowerBound="1" eType="#//Artikel"/>
+    </eOperations>
+    <eOperations name="print" ordered="false" lowerBound="1"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigInteger"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="artikel" ordered="false"
+        upperBound="-1" eType="#//Artikel"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Artikel">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ID" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigInteger"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SecurityLager" eSuperTypes="#//Lager">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="secutiryLevel" ordered="false"
+        lowerBound="1" eType="#//SecurityLevel"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="SecurityLevel">
+    <eLiterals name="LowSecutiry"/>
+    <eLiterals name="HighSecurity" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SecurityArtikel" eSuperTypes="#//Artikel">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="neededSecurityLevel" ordered="false"
+        lowerBound="1" eType="#//SecurityLevel"/>
+  </eClassifiers>
+</ecore:EPackage>

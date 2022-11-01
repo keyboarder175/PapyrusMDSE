@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated MDSEPraes2 -->
+      <package
+            uri="http:///MDSEPraes2.ecore"
+            class="MDSEPraes2.MDSEPraes2Package"
+            genModel="MDSEPraes2.genmodel"/>
+   </extension>
+
+</plugin>

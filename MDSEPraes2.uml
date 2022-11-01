@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:Codegen="http://www.eclipse.org/papyrus/Codegen/1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Model xmi:id="_JA07sFbAEe2sNrJLlWgKQQ" name="MDSEPraes2" visibility="protected">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_JFAREFbAEe2sNrJLlWgKQQ">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_qUsOcFbTEe2-1ocOJrpsiA">
+      <importedPackage xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Class" xmi:id="_OwKnoFbBEe2sNrJLlWgKQQ" name="Lager" visibility="private">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_IjhaAFbTEe2-1ocOJrpsiA" name="ID">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_eFiUglbUEe2-1ocOJrpsiA" name="artikel" type="_mDGk0FbQEe2-1ocOJrpsiA" aggregation="shared" association="_eFf4QFbUEe2-1ocOJrpsiA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_eFiUg1bUEe2-1ocOJrpsiA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_eFjioFbUEe2-1ocOJrpsiA" value="*"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_Nlxy8FbTEe2-1ocOJrpsiA" name="addArtikel">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_LzzNEFbVEe2-1ocOJrpsiA" name="artikelToAdd" type="_mDGk0FbQEe2-1ocOJrpsiA"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_P3RpkFbVEe2-1ocOJrpsiA" name="print"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_mDGk0FbQEe2-1ocOJrpsiA" name="Artikel" visibility="private">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_xvX-sFbQEe2-1ocOJrpsiA" name="ID">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_2BVIQFjiEe2X1-YXTP345Q" name="name">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_eFf4QFbUEe2-1ocOJrpsiA" visibility="public" memberEnd="_eFiUglbUEe2-1ocOJrpsiA _eFjioVbUEe2-1ocOJrpsiA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_eFiUgFbUEe2-1ocOJrpsiA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_eFiUgVbUEe2-1ocOJrpsiA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_eFjioVbUEe2-1ocOJrpsiA" name="lager" type="_OwKnoFbBEe2sNrJLlWgKQQ" association="_eFf4QFbUEe2-1ocOJrpsiA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_drC7cFbVEe2-1ocOJrpsiA" name="SecurityLager">
+      <generalization xmi:type="uml:Generalization" xmi:id="_hAl68FbVEe2-1ocOJrpsiA" general="_OwKnoFbBEe2sNrJLlWgKQQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_lsbX8FbVEe2-1ocOJrpsiA" name="secutiryLevel" type="_psG5kFbVEe2-1ocOJrpsiA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_psG5kFbVEe2-1ocOJrpsiA" name="SecurityLevel">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_qDkXUFbVEe2-1ocOJrpsiA" name="LowSecutiry"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_qag3sFbVEe2-1ocOJrpsiA" name="HighSecurity"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_xJLvIFbVEe2-1ocOJrpsiA" client="_drC7cFbVEe2-1ocOJrpsiA" supplier="_psG5kFbVEe2-1ocOJrpsiA"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_Uk84EFjiEe2X1-YXTP345Q" name="SecurityArtikel">
+      <generalization xmi:type="uml:Generalization" xmi:id="_zlNEEFjiEe2X1-YXTP345Q" general="_mDGk0FbQEe2-1ocOJrpsiA"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="__0-MkFjiEe2X1-YXTP345Q" name="neededSecurityLevel" type="_psG5kFbVEe2-1ocOJrpsiA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_YtieEFjiEe2X1-YXTP345Q" memberEnd="_YtqZ4FjiEe2X1-YXTP345Q _YtroAFjiEe2X1-YXTP345Q" navigableOwnedEnd="_YtqZ4FjiEe2X1-YXTP345Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Ytpy0FjiEe2X1-YXTP345Q" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Ytpy0VjiEe2X1-YXTP345Q" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_YtqZ4FjiEe2X1-YXTP345Q" name="artikel" type="_Uk84EFjiEe2X1-YXTP345Q" aggregation="shared" association="_YtieEFjiEe2X1-YXTP345Q">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jUJQYFjiEe2X1-YXTP345Q"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jVpsQFjiEe2X1-YXTP345Q" value="*"/>
+      </ownedEnd>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_YtroAFjiEe2X1-YXTP345Q" name="lager" type="_drC7cFbVEe2-1ocOJrpsiA" association="_YtieEFjiEe2X1-YXTP345Q"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_KnU74FjjEe2X1-YXTP345Q" client="_Uk84EFjiEe2X1-YXTP345Q" supplier="_psG5kFbVEe2-1ocOJrpsiA"/>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_tNpYkFbTEe2-1ocOJrpsiA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_tNqmsFbTEe2-1ocOJrpsiA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_vvccAFj5Ee2oKKjUrima7g">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_vvccAVj5Ee2oKKjUrima7g" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/Codegen/1#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://Codegen_PROFILES/Codegen.profile.uml#_fPDsIBa-EearhdjjJ6cVzQ"/>
+    </profileApplication>
+  </uml:Model>
+  <Codegen:GeneratorHint xmi:id="_5fTzwFkeEe2kMvcg3y3Aew" base_Element="_JA07sFbAEe2sNrJLlWgKQQ" generatorID="Standard C++">
+    <language xmi:type="Codegen:Language" href="pathmap://Codegen_PROFILES/languages.uml#_nya50CjREeayco6FJ_OtTQ"/>
+  </Codegen:GeneratorHint>
+</xmi:XMI>
